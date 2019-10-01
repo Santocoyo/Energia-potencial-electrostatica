@@ -1,0 +1,300 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10064,        292]
+NotebookOptionsPosition[      8531,        262]
+NotebookOutlinePosition[      8930,        278]
+CellTagsIndexPosition[      8887,        275]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Energ\[IAcute]a potencial electrost\[AAcute]tica de una l\[IAcute]nea finita \
+uniformemente cargada\
+\>", "Title",
+ CellChangeTimes->{{3.7789407530941997`*^9, 3.7789408075451097`*^9}, {
+  3.778942958856694*^9, 
+  3.7789429595368333`*^9}},ExpressionUUID->"15ba9ba6-50ed-4d7e-94e7-\
+aa9d7cd48211"],
+
+Cell["Alejandro Santoscoy Rivero", "Subtitle",
+ CellChangeTimes->{{3.778942966002762*^9, 
+  3.7789429717136717`*^9}},ExpressionUUID->"3e8297ad-b931-45f3-880b-\
+5f1efe5c9b21"],
+
+Cell["Se inicia asignando valores a los par\[AAcute]metros utilizados ", \
+"Text",
+ CellChangeTimes->{{3.7789409451613894`*^9, 3.7789410775331335`*^9}, 
+   3.778941455548769*^9},ExpressionUUID->"95251cf4-404e-4337-97ab-\
+74864835e553"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Epsilon]", "=", 
+   RowBox[{"8.8541878176", "*", 
+    RowBox[{"10", "^", 
+     RowBox[{"(", 
+      RowBox[{"-", "12"}], ")"}]}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"\[Lambda]", "=", "5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L1", "=", "15"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"L2", "=", "30"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"\[Rho]", "=", "5"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"z", "=", "0"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7789401189108753`*^9, 3.778940121604946*^9}, {
+  3.778940155634794*^9, 3.7789401566073723`*^9}, {3.7789403550150113`*^9, 
+  3.7789403652393055`*^9}, {3.778940611591509*^9, 3.778940615247183*^9}, {
+  3.778940814149474*^9, 3.7789408215273046`*^9}, {3.7789430980458803`*^9, 
+  3.7789430987154274`*^9}},ExpressionUUID->"89f9341a-66d2-441b-a476-\
+713387d04f4c"],
+
+Cell["\<\
+Definiendo cada componente del campo el\[EAcute]ctrico de la l\[IAcute]nea \
+finita\
+\>", "Text",
+ CellChangeTimes->{{3.77894110003852*^9, 3.7789411338792796`*^9}, {
+  3.778941306626628*^9, 
+  3.778941309413735*^9}},ExpressionUUID->"6f42c145-f529-4c39-ae9b-\
+a8d9b45f9235"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Campoi", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"Cos", "[", "\[Theta]", "]"}], ")"}], "*", 
+    RowBox[{"(", 
+     RowBox[{"\[Lambda]", "/", 
+      RowBox[{"(", 
+       RowBox[{"4", "Pi", "*", "\[Epsilon]", "*", "\[Rho]"}], ")"}]}], ")"}], 
+    "*", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"L2", "-", "z"}], ")"}], "/", 
+       RowBox[{"\[Sqrt]", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Rho]", "^", "2"}], "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"L2", "-", "z"}], ")"}], "^", "2"}]}], ")"}]}]}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"z", "+", "L1"}], ")"}], "/", 
+       RowBox[{"\[Sqrt]", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Rho]", "^", "2"}], "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"z", "+", "L1"}], ")"}], "^", "2"}]}], ")"}]}]}]}], 
+     ")"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Campoj", "=", 
+   RowBox[{
+    RowBox[{"Sin", "[", "\[Theta]", "]"}], "*", 
+    RowBox[{"(", 
+     RowBox[{"\[Lambda]", "/", 
+      RowBox[{"(", 
+       RowBox[{"4", "Pi", "*", "\[Epsilon]", "*", "\[Rho]"}], ")"}]}], ")"}], 
+    "*", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"L2", "-", "z"}], ")"}], "/", 
+       RowBox[{"\[Sqrt]", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Rho]", "^", "2"}], "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"L2", "-", "z"}], ")"}], "^", "2"}]}], ")"}]}]}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"z", "+", "L1"}], ")"}], "/", 
+       RowBox[{"\[Sqrt]", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Rho]", "^", "2"}], "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"z", "+", "L1"}], ")"}], "^", "2"}]}], ")"}]}]}]}], 
+     ")"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Campok", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"\[Lambda]", "/", 
+      RowBox[{"(", 
+       RowBox[{"4", "Pi", "*", "\[Epsilon]"}], ")"}]}], ")"}], "*", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"1", "/", 
+       RowBox[{"(", 
+        RowBox[{"\[Sqrt]", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Rho]", "^", "2"}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"z", "-", "L2"}], ")"}], "^", "2"}]}], ")"}]}], ")"}]}], 
+      "-", 
+      RowBox[{"1", "/", 
+       RowBox[{"(", 
+        RowBox[{"\[Sqrt]", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Rho]", "^", "2"}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"z", "+", "L1"}], ")"}], "^", "2"}]}], ")"}]}], 
+        ")"}]}]}], ")"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7789384277602806`*^9, 3.778938485590757*^9}, {
+  3.7789395490338964`*^9, 3.7789395851616507`*^9}, {3.7789398914511385`*^9, 
+  3.77893992654869*^9}, {3.778939956723977*^9, 3.778939964737985*^9}, {
+  3.7789400020887437`*^9, 3.7789401024408817`*^9}, {3.7789401640905676`*^9, 
+  3.778940173192594*^9}, {3.7789412859115224`*^9, 3.7789412864908257`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"8088f492-8df8-4474-8a7b-cb1cc94f3f36"],
+
+Cell["\<\
+Planteando e integrando num\[EAcute]ricamente la potencia cuadrada del campo \
+el\[EAcute]ctrico\
+\>", "Text",
+ CellChangeTimes->{{3.778941389170537*^9, 3.778941421049635*^9}, {
+  3.778941459656966*^9, 
+  3.7789414624719906`*^9}},ExpressionUUID->"37bf1771-2c6d-4e59-8d3d-\
+1232ab4481bd"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Ecuadrada", "=", 
+   RowBox[{
+    RowBox[{"Campoi", "^", "2"}], "+", 
+    RowBox[{"Campoj", "^", "2"}], "+", 
+    RowBox[{"Campok", "^", "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"integral", "=", 
+   RowBox[{"NIntegrate", "[", 
+    RowBox[{
+     RowBox[{"{", "Ecuadrada", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Rho]", ",", "0", ",", "Infinity"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Theta]", ",", "0", ",", 
+       RowBox[{"2", "Pi"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}]}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{
+  3.7789412802418733`*^9, {3.778941472809121*^9, 3.7789414742466097`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"a763d286-0572-459e-9502-6297d734fcbd"],
+
+Cell["Recordando que la energ\[IAcute]a potencial se expresa como", "Text",
+ CellChangeTimes->{{3.778941479918582*^9, 3.778941492478532*^9}, {
+  3.7789416968561497`*^9, 
+  3.778941699530998*^9}},ExpressionUUID->"a6466530-1ce3-42e2-9780-\
+c75023d58bcb"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["U", "E"], "=", 
+   RowBox[{
+    FractionBox[
+     SubscriptBox["\[Epsilon]", "0"], "2"], 
+    RowBox[{"\[Integral]", 
+     RowBox[{
+      SuperscriptBox["E", "2"], 
+      RowBox[{"dV", "'"}]}]}]}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.7789417035755816`*^9, 3.7789417462813234`*^9}, {
+  3.7789421930583706`*^9, 3.7789422433349752`*^9}, {3.7789422912148104`*^9, 
+  3.7789422952103987`*^9}, {3.7789423266845207`*^9, 
+  3.778942503218745*^9}},ExpressionUUID->"d673b37d-4274-44b2-9f02-\
+2047ebf5a608"],
+
+Cell["\<\
+La energ\[IAcute]a potencial electrost\[AAcute]tica de una l\[IAcute]nea \
+finita con los par\[AAcute]metros dados es\
+\>", "Text",
+ CellChangeTimes->{{3.7789425323210406`*^9, 3.7789425536488843`*^9}, {
+  3.7789428101363635`*^9, 
+  3.77894281684102*^9}},ExpressionUUID->"9c1ad918-c270-4686-97ec-\
+8d42630898f5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Energia", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"\[Epsilon]", "/", "2"}], ")"}], "*", "integral"}]}]], "Input",
+ CellLabel->"In[12]:=",ExpressionUUID->"493cf5b2-d116-4084-bc93-a6ed3817e684"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  "3.263243375095662824024466248906`15.954589770191005*^22717757175", 
+  "}"}]], "Output",
+ CellChangeTimes->{3.778942559707963*^9, 3.77894273314956*^9, 
+  3.7789427873077884`*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"cf0c9e59-beed-4a33-a292-6d92c3a68c3a"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+SpellingDictionaries->{"CorrectWords"->{"Santoscoy"}},
+FrontEndVersion->"12.0 para Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 306, 7, 156, "Title",ExpressionUUID->"15ba9ba6-50ed-4d7e-94e7-aa9d7cd48211"],
+Cell[889, 31, 174, 3, 53, "Subtitle",ExpressionUUID->"3e8297ad-b931-45f3-880b-5f1efe5c9b21"],
+Cell[1066, 36, 235, 4, 34, "Text",ExpressionUUID->"95251cf4-404e-4337-97ab-74864835e553"],
+Cell[1304, 42, 856, 22, 124, "Input",ExpressionUUID->"89f9341a-66d2-441b-a476-713387d04f4c"],
+Cell[2163, 66, 283, 7, 34, "Text",ExpressionUUID->"6f42c145-f529-4c39-ae9b-a8d9b45f9235"],
+Cell[2449, 75, 3229, 100, 130, "Input",ExpressionUUID->"8088f492-8df8-4474-8a7b-cb1cc94f3f36"],
+Cell[5681, 177, 297, 7, 34, "Text",ExpressionUUID->"37bf1771-2c6d-4e59-8d3d-1232ab4481bd"],
+Cell[5981, 186, 839, 23, 64, "Input",ExpressionUUID->"a763d286-0572-459e-9502-6297d734fcbd"],
+Cell[6823, 211, 252, 4, 34, "Text",ExpressionUUID->"a6466530-1ce3-42e2-9780-c75023d58bcb"],
+Cell[7078, 217, 563, 15, 45, "Input",ExpressionUUID->"d673b37d-4274-44b2-9f02-2047ebf5a608"],
+Cell[7644, 234, 321, 7, 34, "Text",ExpressionUUID->"9c1ad918-c270-4686-97ec-8d42630898f5"],
+Cell[CellGroupData[{
+Cell[7990, 245, 222, 5, 28, "Input",ExpressionUUID->"493cf5b2-d116-4084-bc93-a6ed3817e684"],
+Cell[8215, 252, 288, 6, 36, "Output",ExpressionUUID->"cf0c9e59-beed-4a33-a292-6d92c3a68c3a"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
